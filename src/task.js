@@ -19,6 +19,7 @@ export const tasks = [
     title: "Mi cuarta tarea",
     description: "4T || Estudair matematicas",
   },
+  
 ];
 
 /*console.log(typeof tareas)*/

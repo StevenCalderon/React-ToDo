@@ -10,20 +10,21 @@ export default function App() {
     setTasks(data);
   }, []);
 
-  const createTask = (taskTitle) => {
+  const createTask = (title, description) => {
+    console.log(`Este es el objeto task: \n ${title} \n ${description} `)
     setTasks([
       ...tasks,
       {
-        title: taskTitle,
+        title: title,
         id: tasks.length,
-        description: "Nueva Tarea",
+        description: description,
       },
     ]);
   };
 
   return (
     <>
-      <TaskForm taskTitle={createTask} />
+      <TaskForm task={createTask} />
       <TaskList tasks={tasks} />
     </>
   );

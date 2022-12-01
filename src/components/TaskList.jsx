@@ -7,7 +7,7 @@ export function TaskList({ tasks }) {
   return (
     <>
       {tasks.map((tasks,index) => (
-        <TaskCard key={index} task={tasks}/>
+        <TaskCard key={tasks.id} task={tasks}/>
       ))}
     </>
   );

@@ -6,9 +6,10 @@ export function TaskForm({ task }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    task(title, description);
+    task({ title, description });
+    setTitle("");
+    setDescription("");
   };
-
 
   return (
     <>
@@ -18,6 +19,9 @@ export function TaskForm({ task }) {
           onChange={(e) => {
             setTitle(e.target.value);
           }}
+          value={title}
+          autoFocus
+          
         />
         <textarea
           placeholder="Descipcion de la tarea"
@@ -26,6 +30,7 @@ export function TaskForm({ task }) {
           onChange={(e) => {
             setDescription(e.target.value);
           }}
+          value={description}
         ></textarea>
         <button>Guardar</button>
       </form>
